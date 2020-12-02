@@ -1,0 +1,24 @@
+<%- include("partials/header") -%>
+<h1>Edit</h1>
+<form action="/edit" method="POST">
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input
+      type="text"
+      class="form-control"
+      value="<%= titlePlaceholder %>"
+      id="title"
+      name="postTitle"
+    />
+  </div>
+  <div class="form-group">
+    <label for="content">Post:</label>
+    <textarea class="form-control" rows="5" id="content" name="postContent">
+<%= contentPlaceholder %></textarea
+    >
+  </div>
+  <input type="hidden" value="<%= postId %>" name="id" />
+  <button type="submit" class="btn btn-primary">Edit</button>
+</form>
+
+<%- include("partials/footer") -%>
